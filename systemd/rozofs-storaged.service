@@ -1,0 +1,10 @@
+[Unit]
+Description=Rozofs storaged server
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/storaged -d -s
+PIDFile=/var/run/storaged.pid
+
+[Install]
+WantedBy=multi-user.target

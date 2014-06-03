@@ -1,0 +1,10 @@
+[Unit]
+Description=RozoFS exportd server
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/exportd -d -s
+PIDFile=/var/run/exportd.pid
+
+[Install]
+WantedBy=multi-user.target
